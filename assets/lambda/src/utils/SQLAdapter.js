@@ -16,8 +16,7 @@ class SQLAdapter {
     
     static async query(sql) {
         
-       var secretValueString = await SecretsManager.getSecret(secretArn, region);    
-        console.log('SecretValue from AWS Secrets - ' + secretValueString);
+       var secretValueString = await SecretsManager.getSecret(secretArn, region);        
         let secretValue = JSON.parse(secretValueString);
         
         var con = {};

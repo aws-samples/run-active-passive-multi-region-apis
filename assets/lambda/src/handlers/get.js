@@ -20,8 +20,6 @@ exports.handler = async (event, context) => {
     
     if(event.id){
       const id = event.id;
-      console.log("Received event id - " + id);
-       
       return response = {
         statusCode: 200,
         body: await SQLAdapter.getToDos(id)
@@ -45,8 +43,6 @@ exports.handler = async (event, context) => {
   finally {
     console.log("Lambda Executed Successfully!");
   }
-  
-  console.log("here - 4");
   
   return response;
   

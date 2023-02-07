@@ -34,6 +34,7 @@ The below solution is recommended for the customers having registered domain nam
 * Set up your AWS CLI. For steps, see [Getting Started (AWS CLI)](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) We used AWS CLI 2.7.16
 * Install the latest version of [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html#getting_started_install). We used Version 2.54.0
 * Install the latest version of [Node JS](https://nodejs.org/en/download/). We used v16.15.1
+* Install the latest version of [jq](https://stedolan.github.io/jq/download/). We used Version 1.6
 * AWS CodeCommit user setup in US-EAST-1 region (primary region used for this solution). Make sure to setup in your local account to validate CI/CD initiated secondary region failover process. Please refer [here](https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up.html) for the steps.
 
 ### Solution Steps

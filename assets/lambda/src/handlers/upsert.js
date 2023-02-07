@@ -57,8 +57,5 @@ exports.handler = async (event, context) => {
     console.log("Lambda Executed Successfully!");
   }
   
-  console.log("here - 4");
-  
-  return response;
-  
+  return response;  
 };
