@@ -43,11 +43,11 @@ export class FailoverPipelineStack extends Stack {
                     },
                     'AWS_SRC_REGION': {
                         type: BuildEnvironmentVariableType.PLAINTEXT,
-                        value: 'us-east-1'
+                        value: process.env.AWS_SRC_REGION
                     },
                     'AWS_DEST_REGION': {
                         type: BuildEnvironmentVariableType.PLAINTEXT,
-                        value: 'us-east-2'
+                        value: process.env.AWS_DEST_REGION
                     },
                     'BREAK_CLUSTER': {
                         type: BuildEnvironmentVariableType.PLAINTEXT,
@@ -55,11 +55,11 @@ export class FailoverPipelineStack extends Stack {
                     },
                     'TARGET_CLUSTER_ID': {
                         type: BuildEnvironmentVariableType.PLAINTEXT,
-                        value: 'todomgmt-infra-secd-db-cluster'
+                        value: process.env.TARGET_CLUSTER_ID
                     },
                     'TARGET_RDS_PROXY_NAME': {
                         type: BuildEnvironmentVariableType.PLAINTEXT,
-                        value: 'todomgmt-infra-secd-rds-proxy'
+                        value: process.env.TARGET_RDS_PROXY_NAME
                     },
                     'RDS_PROXY_TARGET_GROUP_NAME': {
                         type: BuildEnvironmentVariableType.PLAINTEXT,
@@ -67,15 +67,15 @@ export class FailoverPipelineStack extends Stack {
                     },
                     'SRC_CLUSTER_ID': {
                         type: BuildEnvironmentVariableType.PLAINTEXT,
-                        value: 'todomgmt-infra-pri-db-cluster'
+                        value: process.env.SRC_CLUSTER_ID
                     },
                     'SRC_RDS_PROXY_NAME': {
                         type: BuildEnvironmentVariableType.PLAINTEXT,
-                        value: 'todomgmt-infra-pri-rds-proxy'
+                        value: process.env.SRC_RDS_PROXY_NAME
                     },
                     'CLOUDFRONT_DISTRIBUTION_ID': {
                         type: BuildEnvironmentVariableType.PLAINTEXT,
-                        value: 'your cf distribution id'
+                        value: process.env.CLOUDFRONT_DISTRIBUTION_ID
                     },
                     'CLOUDFRONT_ORIGIN_ID': {
                         type: BuildEnvironmentVariableType.PLAINTEXT,
@@ -83,7 +83,7 @@ export class FailoverPipelineStack extends Stack {
                     },
                     'CLOUDFRONT_NEW_ORIGIN_DOMAIN_NAME': {
                         type: BuildEnvironmentVariableType.PLAINTEXT,
-                        value: 'your api gw domain name'
+                        value: process.env.CLOUDFRONT_NEW_ORIGIN_DOMAIN_NAME
                     }
                 }
             }
