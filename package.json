@@ -1,0 +1,29 @@
+{
+  "name": "multi-region-rest-api",
+  "version": "0.1.0",
+  "bin": {
+    "app": "bin/app.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk",
+    "install:lambda": "cd ./assets/lambda; npm i",
+    "package": "esbuild assets/lambda/src/*/*.js --bundle --external:aws-sdk --platform=node --outdir=assets/lambda/dist/"
+  },
+  "devDependencies": {
+    "@aws-solutions-constructs/aws-cognito-apigateway-lambda": "^2.27.0",
+    "@types/mysql": "^2.15.21",
+    "@types/node": "^10.17.27",
+    "aws-cdk-lib": "^2.0.0",
+    "constructs": "^10.0.0",
+    "dotenv": "^16.0.3",
+    "esbuild": "^0.15.10",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "peerDependencies": {
+    "aws-cdk-lib": "^2.0.0",
+    "constructs": "^10.0.0"
+  }
+}

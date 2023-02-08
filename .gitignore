@@ -1,0 +1,14 @@
+cdk.out
+node_modules
+.vscode
+.idea
+assets/*/dist/*
+.env.local
+*.d.ts
+lib/*.js
+bin/*.js
+util/*.js
+cdk.context.json
+assets/lambda/node_modules
+.DS_Store
+package-lock.json
